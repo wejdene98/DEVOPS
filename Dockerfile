@@ -3,7 +3,6 @@ FROM openjdk:17-jdk-alpine AS builder
 WORKDIR /app
 COPY pom.xml .
 COPY src src
-RUN ./mvnw package
 
 # Final stage
 FROM openjdk:17
